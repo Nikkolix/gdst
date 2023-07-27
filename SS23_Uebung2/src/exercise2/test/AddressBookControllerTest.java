@@ -103,7 +103,9 @@ public class AddressBookControllerTest {
 			fail("Expected to have thrown: ParameterException");
         } catch (SizeLimitReachedException e) {
         	fail("Unexpected exception thrown: " + e.getMessage());
-        } catch (ParameterException e) {}
+        } catch (ParameterException e) {
+        	
+        }
 	}
 	
 	@Test
@@ -113,7 +115,9 @@ public class AddressBookControllerTest {
 			fail("Expected to have thrown: ParameterException");
         } catch (SizeLimitReachedException e) {
         	fail("Unexpected exception thrown: " + e.getMessage());
-        } catch (ParameterException e) {}
+        } catch (ParameterException e) {
+        	
+        }
 	}
 	
 	@Test
@@ -123,7 +127,9 @@ public class AddressBookControllerTest {
 			fail("Expected to have thrown: ParameterException");
         } catch (SizeLimitReachedException e) {
         	fail("Unexpected exception thrown: " + e.getMessage());
-        } catch (ParameterException e) {}
+        } catch (ParameterException e) {
+        	
+        }
 	}
 	
 	@Test
@@ -133,7 +139,9 @@ public class AddressBookControllerTest {
 			fail("Expected to have thrown: ParameterException");
         } catch (SizeLimitReachedException e) {
         	fail("Unexpected exception thrown: " + e.getMessage());
-        } catch (ParameterException e) {}
+        } catch (ParameterException e) {
+        	
+        }
 	}
 	
 	@Test
@@ -143,7 +151,9 @@ public class AddressBookControllerTest {
 			fail("Expected to have thrown: ParameterException");
         } catch (SizeLimitReachedException e) {
         	fail("Unexpected exception thrown: " + e.getMessage());
-        } catch (ParameterException e) {}
+        } catch (ParameterException e) {
+        	
+        }
 	}
 	
 	@Test
@@ -153,7 +163,9 @@ public class AddressBookControllerTest {
 			fail("Expected to have thrown: ParameterException");
         } catch (SizeLimitReachedException e) {
         	fail("Unexpected exception thrown: " + e.getMessage());
-        } catch (ParameterException e) {}
+        } catch (ParameterException e) {
+        	
+        }
 	}
 	
 	@Test
@@ -163,7 +175,9 @@ public class AddressBookControllerTest {
 			fail("Expected to have thrown: ParameterException");
         } catch (SizeLimitReachedException e) {
         	fail("Unexpected exception thrown: " + e.getMessage());
-        } catch (ParameterException e) {}
+        } catch (ParameterException e) {
+        	
+        }
 	}
 	
 	@Test
@@ -173,7 +187,9 @@ public class AddressBookControllerTest {
 			fail("Expected to have thrown: ParameterException");
         } catch (SizeLimitReachedException e) {
         	fail("Unexpected exception thrown: " + e.getMessage());
-        } catch (ParameterException e) {}
+        } catch (ParameterException e) {
+        	
+        }
 	}
 	
 	@Test
@@ -183,7 +199,9 @@ public class AddressBookControllerTest {
 			fail("Expected to have thrown: ParameterException");
         } catch (SizeLimitReachedException e) {
         	fail("Unexpected exception thrown: " + e.getMessage());
-        } catch (ParameterException e) {}
+        } catch (ParameterException e) {
+        	
+        }
 	}
 	
 	@Test
@@ -221,7 +239,23 @@ public class AddressBookControllerTest {
 			fail("Expected to have thrown: ParameterException");
         } catch (SizeLimitReachedException e) {
         	fail("Unexpected exception thrown: " + e.getMessage());
-        } catch (ParameterException e) {}
+        } catch (ParameterException e) {
+        	
+        }
+	}
+	
+	@Test
+	public void invalidPhoneToHigh() {
+		try {
+			this.controller.add("Max", "Mustermann", "M", "18446744073709551616", null);
+			fail("Expected to have thrown: ParameterException");
+        } catch (SizeLimitReachedException e) {
+        	fail("Unexpected exception thrown: " + e.getMessage());
+        } catch (ParameterException e) {
+        	
+        } catch (NumberFormatException e) {
+        	fail("Unexpected exception thrown: " + e.getMessage());
+        }
 	}
 	
 	@Test
@@ -231,7 +265,9 @@ public class AddressBookControllerTest {
 			fail("Expected to have thrown: ParameterException");
         } catch (SizeLimitReachedException e) {
         	fail("Unexpected exception thrown: " + e.getMessage());
-        } catch (ParameterException e) {}
+        } catch (ParameterException e) {
+        	
+        }
 	}
 	
 	@Test
@@ -241,7 +277,9 @@ public class AddressBookControllerTest {
 			fail("Expected to have thrown: ParameterException");
         } catch (SizeLimitReachedException e) {
         	fail("Unexpected exception thrown: " + e.getMessage());
-        } catch (ParameterException e) {}
+        } catch (ParameterException e) {
+        	
+        }
 	}
 	
 	@Test
@@ -251,7 +289,9 @@ public class AddressBookControllerTest {
 			fail("Expected to have thrown: ParameterException");
         } catch (SizeLimitReachedException e) {
         	fail("Unexpected exception thrown: " + e.getMessage());
-        } catch (ParameterException e) {}
+        } catch (ParameterException e) {
+        	
+        }
 	}
 	
 	@Test
@@ -266,7 +306,9 @@ public class AddressBookControllerTest {
 			fail("Expected to have thrown: SizeLimitReachedException");
         } catch (ParameterException e) {
         	fail("Unexpected exception thrown: " + e.getMessage());
-        } catch (SizeLimitReachedException e) {}
+        } catch (SizeLimitReachedException e) {
+        	
+        }
 	}
 	
 }
